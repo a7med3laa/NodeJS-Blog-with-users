@@ -1,0 +1,41 @@
+<%- include("partials/header")%>
+
+
+<br>
+<br>
+<br>
+<div>
+    <div class="postTitle" id="legend">
+        <legend class="">
+            <h1><%= post.title%></h1>
+        </legend>
+    </div>
+
+    <br>
+
+    <h6 class="date"><%= post.date.toLocaleString()%></h6>
+    <br>
+    <br>
+    <div class="container">
+        <h3><%= post.content%></h3>
+        <br>
+        <br>
+        <p>Written by <%= post.username%></p>
+    </div>
+    <br>
+
+
+    <legend class="">
+        <p>User like post </p>
+    </legend>
+
+    <div class="container">
+        <%  for (i = 1; i < post.likedusers.length; i++) {%>
+        <p> <%= post.likedusers[i]%> </p>
+        <% } %>
+        <a href="/post/<%=post._id%>" class="btn btn-primary btn-color"> Back</a>
+    </div>
+
+</div>
+
+<%- include("partials/footer")%>

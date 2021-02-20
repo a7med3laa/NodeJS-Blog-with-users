@@ -1,0 +1,39 @@
+<%- include("partials/header"); -%>
+
+
+<div class="text-center">
+    <form class="form-signin" method="post" action="/login">
+        <fieldset>
+            <div id="legend">
+                <legend class="">Sign In</legend>
+            </div>
+            <br>
+            <div>
+                <p class="errorMessage"><%= errorMessage%></p>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Email -->
+                <label class="control-label" for="email">E-mail</label>
+                <input type="email" name="email" placeholder="Email address" class="form-control">
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Password -->
+                <label class="control-label" for="password">Password</label>
+                <input type="password" name="password" placeholder="Enter Password" class="form-control">
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block btn-color" value="Login">
+                    <br>
+                    <label> New user <a href="/register">Sign UP</a></label>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+<%- include("partials/footer"); -%>

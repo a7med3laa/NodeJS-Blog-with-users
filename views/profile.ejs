@@ -1,0 +1,44 @@
+<%- include("partials/header"); -%>
+
+<div class="sidenav">
+    <h1> <%= username.toUpperCase() %> </h1>
+
+    <img src="/images/profile.jpg" class="imgBackgorund" alt="profilePic" srcset="">
+    <a href="#about">Change Photo</a>
+    <a href="/compose">Write Post</a>
+    <a href="#Info">Edit Account</a>
+    <a href="/logout">logout</a>
+
+</div>
+
+<div class="userPosts">
+
+
+    <%  userPosts.forEach(function(post){ %>
+
+    <fieldset>
+        <legend>
+            <p><%=post.title%></p>
+        </legend>
+
+        <p>
+            <%=post.content.substring(0, 100) + " ..."%>
+            <a href="/post/<%=post._id%>">Read More</a>
+        </p>
+        <br>
+        <a href="/edit/<%=post._id%>" class="btn btn-primary btn-color"> Edit</a>
+
+        &nbsp;&nbsp;
+
+        <a href="/delete/<%=post._id%>" class="btn btn-primary btn-color"> Delete</a>
+
+    </fieldset>
+    <br>
+
+    <% }) %>
+
+</div>
+
+
+
+<%- include("partials/footer"); -%>

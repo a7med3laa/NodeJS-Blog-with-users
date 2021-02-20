@@ -1,0 +1,20 @@
+<%- include("partials/header")%>
+
+<h1>Edit Post</h1>
+
+<form action="/edit/<%=post._id%>" method="POST">
+
+    <div class="form-group">
+        <label>Title :</label>
+        <input class="form-control" type="text" value="<%=post.title%>" name="postTitle">
+
+        <label>Body :</label>
+        <textarea required name="postBody" id="postBody" class="form-control"><%=post.content%></textarea>
+
+
+    </div>
+    <button class="btn btn-primary btn-color" type="submit" name="button">Publish</button>
+
+</form>
+
+<%- include("partials/footer")%>
