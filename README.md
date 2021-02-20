@@ -1,6 +1,6 @@
 # NodeJS-Blog-with-users
 
-The daily journal is a blog website written with nodeJS and ejs. It enables users to register on the site and writes articles and comments on other articles 
+The daily journal is a blog website written with express framework for nodeJS and ejs. It enables users to register on the site and writes articles and comments on other articles 
 
 The user after register can write, edit ,and delete his article.
 
