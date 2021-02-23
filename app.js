@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 require('dotenv').config();
 const Post = require('./models/post');
 const User = require('./models/user');
-
+const Port=process.env.PORT;
 
 const homeStartingContent = "Welcome to Simple Blog Site. You are free to write your own story!!";
 const aboutContent = "This is a simple daily bLog written with NodeJs and MongoDB";
@@ -426,6 +426,6 @@ app.get("/showlikedlist/:postId", function (req, res) {
   });
 });
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+app.listen(Port, function () {
+  console.log("Server started on port "+Port);
 });
